@@ -20,7 +20,7 @@ public class ToDoList{
     }
 
     public void getToDoList(ToDoList toDoList){
-        for(ToDoList task : toDoList)
+        
     }
 
 }
