@@ -1,13 +1,18 @@
 public class ToDoList{
     
-    
+    int taskCount;
+    Task tasks[] = new Task[taskCount];
 
-    public ToDoList(Task task){
+    public ToDoList(int capacity){
         
         
     }
 
     public void addTask(Task task){
+        if(taskCount<tasks.length){
+            tasks[taskCount] = task;
+            taskCount++;
+        }
 
     }
 
@@ -19,7 +24,11 @@ public class ToDoList{
         System.out.println("Title: " + task.title + "\nDescription: " + task.description + "\nCompletion Status: " + task.isComplete);
     }
 
-    public void getToDoList(ToDoList toDoList){
+    public void getToDoList(){
+        for(Task task : tasks){
+            System.out.println(task.title + "\n" + task.description + "\n" + task.isComplete + taskCount);
+        }
+        
         
     }
 
